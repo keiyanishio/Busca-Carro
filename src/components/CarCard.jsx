@@ -1,6 +1,6 @@
 export default function CarCard({ Name, Model, Image, Price, Location }) {
   return (
-    <div className="border rounded-lg shadow-lg overflow-hidden w-80">
+    <div className="bg-white border rounded-lg shadow-lg overflow-hidden w-80">
       <img
         src={Image}
         alt={`${Name} ${Model}`}

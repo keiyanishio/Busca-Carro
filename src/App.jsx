@@ -117,8 +117,9 @@ function App() {
 
   return (
     <div className="min-h-screen h-auto bg-blue-100 flex flex-col items-center justify-start pb-40">
-      <div className="w-full bg-blue-600 py-6 shadow-md">
-        <h1 className="text-5xl font-bold text-white text-center">BusCarro</h1>
+      <div className="w-full bg-blue-600 py-6 shadow-md flex justify-center items-center gap-0.1">
+        <h1 className="text-5xl font-bold text-white">BusCarro</h1>
+        <img src="/assets/logo.png" alt="Logo BusCarro" className="h-12 w-12" />
       </div>
       <br></br>
       <p className="text-gray-600 text-lg mb-6">
