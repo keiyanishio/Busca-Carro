@@ -1,19 +1,18 @@
-import React from "react";
-
-export default function CarCard({ name, model, price, location, image }) {
+export default function CarCard({ Name, Model, Image, Price, Location }) {
   return (
-    <div className="border rounded shadow p-4 w-full max-w-sm">
+    <div className="border rounded-lg shadow-lg overflow-hidden w-80">
       <img
-        src={image}
-        alt={name}
-        className="w-full h-48 object-cover rounded"
+        src={Image}
+        alt={`${Name} ${Model}`}
+        className="w-full h-48 object-cover"
       />
-      <div className="mt-2">
-        <h2 className="text-lg font-bold">{name}</h2>
-        <p className="text-sm text-gray-600">Modelo: {model}</p>
-        <p className="text-sm">Local: {location}</p>
-        <p className="text-md font-semibold">
-          R$ {price.toLocaleString("pt-BR")}
+      <div className="p-4 flex flex-col gap-2">
+        <h2 className="text-xl font-bold">
+          {Name} {Model}
+        </h2>
+        <p className="text-gray-600">Local: {Location}</p>
+        <p className="text-green-700 font-semibold text-lg">
+          R$ {Price.toLocaleString("pt-BR")}
         </p>
       </div>
     </div>
