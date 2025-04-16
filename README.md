@@ -1,113 +1,150 @@
-# 🚗 Desafio de Estágio - Buscador de Carros
+# BusCarro
 
-Bem-vindo(a) ao nosso desafio técnico! 🎯
+Aplicação React para busca de carros por nome, modelo, localidade e preço.
 
-Queremos ver como você pensa, organiza seu código e entrega experiências. O foco é na simplicidade, clareza e, principalmente, **na experiência do usuário final**.
+## Como rodar o projeto
 
-## 🧠 Descrição do Desafio
+1. Instale as dependências:
 
-Você deverá desenvolver uma aplicação para buscar **carros para compra**, usando um JSON que forneceremos como base de dados.
+   ```bash
+   npm install
+   ```
 
-A aplicação pode ser:
+2. Execute o comando:
 
-- Uma aplicação **web** (ex: React, Next.js, Vue, etc.)
+   ```bash
+   npm run dev
+   ```
 
-- Um **agente de IA** (ex: chatbot, interface de voz, etc.)
+3. Acesse o localhost:
 
-A escolha é totalmente sua!
+   http://localhost:5173
 
-## 🔍 Caso de Uso (Exemplo)
+## Deploy no Vercel
 
-Imagine que o usuário quer encontrar um **BYD Dolphin** em **São Paulo**, com valor aproximado de **R$ 100.000,00**.
+Link: https://busca-carro.vercel.app/
 
-Queremos que esse usuário consiga chegar a esse resultado com **facilidade, agilidade e boa usabilidade**.
+## Decisões técnicas
 
-## 📁 O que vamos te fornecer
+O projeto foi desenvolvido utilizando React em conjunto com o Vite, uma ferramenta eficiente para aplicações web. A escolha se deu principalmente pela rapidez na inicialização e pela simplicidade na configuração. Vale destacar que o Vite também facilita a integração com diversas bibliotecas — entre elas, o TailwindCSS, que foi utilizado para a estilização da aplicação. Por fim, foi utilizado o Vercel para hospedar o projeto.
 
-- Um arquivo `.json` com a base de dados de veículos disponíveis, contendo os campos:
+## Experiência do usuário
 
-```
-{
+Em relação à experiência do usuário, o projeto foi pensado com foco em simplicidade e clareza. A aplicação inicia com uma mensagem explicando do que se trata o app e o que o usuário deve fazer. Em seguida, são apresentados quatro campos de preenchimento, cada um acompanhado de um exemplo para guiar o preenchimento correto.
 
-Name:  string;
+Abaixo dos campos, há um botão de busca, que só pode ser acionado após o preenchimento completo. Caso o usuário tente buscar sem preencher todos os campos, uma mensagem de aviso é exibida informando que ainda faltam informações.
 
-Model:  string;
+Vale destacar que o buscador é flexível, reconhece termos digitados sem acentos, com letras maiúsculas ou minúsculas, e até ignora hifens.
 
-Image:  string;
+Após clicar em “Buscar”, e com os dados devidamente preenchidos, a aplicação exibe os resultados com a foto do carro, nome, modelo, localidade e preço. Caso não haja um carro disponível no valor informado, o sistema sugere modelos semelhantes com preços acima. Se não houver um carro específico na localidade desejada, ele também exibe opções semelhantes em outras regiões.
 
-Price:  number;
-
-Location:  string;
-
-}
-```
-
-**⚠️ Importante:** Você pode (e deve!) atualizar os links das imagens com os que achar mais interessantes e representativos visualmente. Use imagens que valorizem a apresentação do veículo e ajudem a convencer o usuário.
-
-## 🧪 Casos de Teste
-
-A sua aplicação será avaliada com os seguintes cenários:
-
-1. ✅ Procurar um carro que existe no JSON.
-
-2. 🪙 Procurar um carro que existe, mas com um valor abaixo do disponível.
-
-3. 🌎 Procurar um carro que existe, mas em outra localidade.
-
-A ideia aqui é que você pense em como convencer o usuário a comprar mesmo assim — seja com sugestões parecidas, filtros ajustáveis ou com IA que entenda a intenção da busca.
-
-## 🛠️ Requisitos Técnicos
-
-• Experiência intuitiva para buscar e visualizar os carros.
-
-• Utilização do JSON fornecido como base de dados.
-
-• A aplicação pode rodar localmente, mas será um diferencial se estiver hospedada na nuvem (ex: Vercel, Render, AWS, etc).
-
-• Pode ser em qualquer linguagem/framework que você dominar.
-
-## 🌟 Diferenciais (não obrigatórios)
-
-• ✨ Utilização de Inteligência Artificial para melhorar a experiência (ex: busca semântica, chatbot, recomendação inteligente, etc).
-
-• ☁️ Deploy na nuvem.
-
-• 🎨 Cuidado com design e usabilidade (ex: loading feedback, responsividade, microinterações).
-
-• 📦 Organização de código, uso de boas práticas e clareza nos commits.
-
-## 📦 Como entregar
-
-1. Crie um repositório público no GitHub com seu projeto.
-
-2. No README do seu repositório, inclua:
-
-   • Instruções de como rodar o projeto.
-
-   • Prints ou gif do funcionamento (caso não tenha deploy).
-
-   • Explicação das decisões técnicas e como você pensou na experiência do usuário.
-
-   • Resposta à seção de Plano de Negócios (veja abaixo).
-
-## 💼 Plano de Negócios (Obrigatório)
-
-Além da parte técnica, queremos entender sua visão de produto.
-
-Inclua no seu README uma seção chamada “Plano de Negócios” respondendo às perguntas abaixo:
+## Plano de Negócios
 
 1. Se você fosse lançar esse buscador no mercado, qual seria seu modelo de negócios?
 
+- Parcerias
+
+  - Infraestrutura do app (ex: AWS)
+
+  - Concessionárias
+
+- Atividades
+
+  - Desenvolvimento do app e manutenção
+
+  - Atualizações constantes em relação as informações do carro
+
+- Recursos
+
+  - Bibliotecas open source
+
+  - API que retorna as informações onde está os carros
+
+  - Computadores
+
+  - Banco de dados
+
+- Estrutura de Custo
+
+  - Desenvolvimento e manutenção do app
+
+  - Hospedagem do app
+
+  - Armazenamento dos dados
+
+- Proposta de Valor
+
+  - Deixar uma experiência mais agradável e menos frustante na hora de encontrar o carro desejado
+
+  - Diminuir o tempo de econtrar o carro
+
+  - Facilitar a experiência na busca
+
+- Relacionamento com o Cliente
+
+  - Feedback da performance do app
+
+  - Notificações personalizados quando há um carro desejado
+
+- Canais
+
+  - Pelo app
+
+  - Redes Sociais
+
+- Segmento de Cliente
+
+  - Pessoas que não querem perder muito tempo procurando um carro
+
+- Fonte de Receita
+
+  - Anúncios no app
+
+  - Assinatura
+
+  - Doações
+
 2. Como você atrairia seus primeiros usuários? (Estratégia de aquisição, canais, etc)
+
+   Para atrair os primeiros usuários de forma rápida e com baixo custo, eu focaria em divulgação em grupos segmentados de redes sociais, como Facebook e WhatsApp. A estratégia envolveria publicações em comunidades relacionadas a startups, mobilidade urbana e compra e venda de veículos, especialmente grupos onde há pessoas procurando ou anunciando carros.
 
 3. Qual seria sua estimativa de CAC (Custo de Aquisição de Cliente)?
 
+   CAC Mensal:
+
+   Equipe de Marketing: R$ 15.000,00
+
+   Equipe de Vendas: R$ 15.000,00
+
+   Google Ads: R$ 480,00
+
+   Instagram Ads: R$ 150,00
+
+   Clientes adquiridos: 70
+
+   CAC mensal: R$ 437,57
+
 4. Qual seria sua proposta de LTV (Lifetime Value) e como você maximizaria isso?
+   Assinatura mensal: R$ 5,00
+
+   Tempo de permanência: 14 meses
+
+   LTV: R$ 70,00
+
+   Maximizar:
+   Focaria na retenção dos usuários oferecendo uma experiência confiável e personalizada, com notificações sobre novos anúncios de carros compatíveis com suas preferências. Também exploraria benefícios para usuários que anunciam, contribuem com informações sobre veículos ou indicarem o app.
+
+   Para os assinantes, firmaria parcerias com concessionárias para oferecer descontos exclusivos. Além disso, usuários que colocarem seus carros à venda receberiam cashback e teriam seus anúncios em destaque.
 
 5. Que tipo de monetização você considera viável para essa aplicação?
 
+   - Anúncios na versão grátis
+   - Assinatura
+   - Parcerias com as concessionárias, pois anunciamos a loja na localização
+   - Ter uma taxa no anúncio quando um usuário divulga o seu carro a venda
+
 6. Há alguma estratégia de retenção de usuários que você aplicaria?
 
-Essa parte não precisa ser extensa, o mais importante é demonstrar raciocínio estratégico e familiaridade com conceitos básicos de produto e marketing.
+   Uma das estratégias de retenção seria oferecer uma experiência confiável e personalizada, com notificações sobre novos anúncios compatíveis com as preferências do usuário, enviadas por e-mail ou WhatsApp. Além disso, recursos como histórico de busca e filtros avançados ajudariam a manter o engajamento constante.
 
-**_Se tiver qualquer dúvida durante o processo, sinta-se à vontade para perguntar. Boa sorte e divirta-se construindo! 🚀_**
+   Também exploraria benefícios para usuários mais ativos, especialmente aqueles que vendem com frequência. Outra frente seria incentivar a veracidade das informações com usuários que confirmam ou complementam dados de anúncios poderiam receber pontos de reputação. Ao atingir determinadas pontuações, esses usuários poderiam ganhar descontos em alguma compra usando o app.
