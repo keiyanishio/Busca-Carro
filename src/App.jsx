@@ -41,6 +41,7 @@ function App() {
         .trim()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[-\s]/g, "")
         .toLowerCase();
 
     const results = cars.filter((car) => {
